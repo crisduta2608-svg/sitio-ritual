@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ritual — Bienestar en la vida real</title>
+<meta name="description" content="Rutinas, hábitos y bienestar pensados para tu día real, no para una vida perfecta que no existe.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="horizonte"></div>
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo">Ritual<span>.</span></a>
+    <nav class="main">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="blog.html">Artículos</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Bienestar sin postureo</span>
+    <h1>Tu rutina ya tiene ritmo. <em>Solo hace falta escucharlo.</em></h1>
+    <p class="lede">Nada de rutinas de dos horas ni batidos verdes imposibles. Ideas pequeñas, realistas, para las tres partes del día que ya vives: mañana, mediodía y noche.</p>
+    <a href="blog.html" class="btn solid">Leer los artículos</a>
+  </div>
+</section>
+
+<section class="pilares-section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Tres momentos, un mismo cuerpo</h2>
+      <p>El bienestar no vive en un solo hábito milagroso. Vive repartido en todo tu día.</p>
+    </div>
+    <div class="pilares">
+      <div class="pilar">
+        <span class="momento">Mañana</span>
+        <h3>Cómo empiezas, no cuándo te levantas</h3>
+        <p>Rituales de arranque de menos de 10 minutos que no dependen de despertarte a las 5am ni de tener una casa perfecta.</p>
+      </div>
+      <div class="pilar">
+        <span class="momento">Mediodía</span>
+        <h3>Energía que aguanta la tarde</h3>
+        <p>Comidas, pausas y movimiento pensados para gente con trabajo, no para influencers con agenda libre.</p>
+      </div>
+      <div class="pilar">
+        <span class="momento">Noche</span>
+        <h3>Apagar el día de verdad</h3>
+        <p>Hábitos de descanso que se sostienen aunque el día haya sido un desastre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="destacados">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Últimos artículos</h2>
+      <p>Contenido nuevo cada semana, siempre aplicable el mismo día que lo lees.</p>
+    </div>
+    <div class="articulos-grid">
+      <a href="articulos/rutina-manana-sin-tiempo.html" class="tarjeta-articulo">
+        <span class="categoria">Mañana</span>
+        <h3>Una rutina matutina para cuando no tienes tiempo de tener una rutina</h3>
+        <p>Cinco minutos, tres pasos, cero productos milagro. Así se ve un inicio de día que sí puedes sostener.</p>
+        <span class="leer">Leer artículo</span>
+      </a>
+      <a href="articulos/comer-bien-poco-tiempo.html" class="tarjeta-articulo">
+        <span class="categoria">Mediodía</span>
+        <h3>Comer bien cuando solo tienes 20 minutos de pausa</h3>
+        <p>Estrategias de preparación y elección de comida para oficinistas, no para quien cocina por hobby.</p>
+        <span class="leer">Leer artículo</span>
+      </a>
+      <a href="articulos/dormir-mejor-habitos.html" class="tarjeta-articulo">
+        <span class="categoria">Noche</span>
+        <h3>Por qué duermes ocho horas y sigues cansado</h3>
+        <p>La calidad del sueño depende de lo que haces antes, no solo de cuánto duermes.</p>
+        <span class="leer">Leer artículo</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="horizonte"></div>
+
+<section class="banda-cta">
+  <div class="wrap">
+    <h2>Un hábito nuevo cada semana, directo a tu correo</h2>
+    <a href="contacto.html" class="btn">Suscribirme</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Ritual</h4>
+        <p style="max-width: 32ch; font-size: 0.9rem;">Bienestar pensado para la vida real: sin rutinas imposibles, sin culpa, sin postureo.</p>
+      </div>
+      <div>
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="blog.html">Todos los artículos</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacidad.html">Política de privacidad</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Ritual</span>
+      <span>Hecho con calma, no con prisa</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
