@@ -1,0 +1,451 @@
+/* ============================================
+   Ritual — sistema de diseño
+   Paleta: tinta (#14332C), papel (#F0EDE4),
+   ámbar (#D4A24C), salvia (#7C9885), coral (#E2654A)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --ink: #14332C;
+  --ink-soft: #1E4339;
+  --paper: #F0EDE4;
+  --paper-dim: #E5E1D4;
+  --amber: #D4A24C;
+  --sage: #7C9885;
+  --coral: #E2654A;
+  --text: #24302B;
+  --text-soft: #566860;
+
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Work Sans', -apple-system, sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--paper);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* --- Horizonte: elemento firma, franja de degradado que
+   representa el ritmo del día (amanecer > día > calma) --- */
+.horizonte {
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--ink) 0%, var(--coral) 35%, var(--amber) 65%, var(--sage) 100%);
+}
+
+/* --- Header --- */
+header.site {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 22px 0;
+}
+
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.logo span { color: var(--amber); font-style: italic; font-weight: 400; }
+
+nav.main { display: flex; gap: 32px; }
+
+nav.main a {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--paper);
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+nav.main a:hover, nav.main a.active { opacity: 1; color: var(--amber); }
+
+/* --- Hero --- */
+.hero {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 90px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  right: -10%;
+  top: -20%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212,162,76,0.25) 0%, rgba(212,162,76,0) 70%);
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--sage);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.08;
+  max-width: 14ch;
+  margin-bottom: 28px;
+}
+
+.hero h1 em {
+  color: var(--amber);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero p.lede {
+  font-size: 1.15rem;
+  color: var(--paper-dim);
+  max-width: 46ch;
+  margin-bottom: 36px;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: 1px solid var(--amber);
+  color: var(--amber);
+  transition: all 0.2s ease;
+}
+
+.btn:hover { background: var(--amber); color: var(--ink); }
+
+.btn.solid {
+  background: var(--amber);
+  color: var(--ink);
+  border-color: var(--amber);
+}
+
+.btn.solid:hover { background: var(--coral); border-color: var(--coral); color: var(--paper); }
+
+/* --- Section shell --- */
+section { padding: 84px 0; }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  gap: 24px;
+}
+
+.section-head h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.section-head p {
+  color: var(--text-soft);
+  max-width: 34ch;
+  font-size: 0.95rem;
+}
+
+/* --- Pilares (rutina del día) --- */
+.pilares {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--text);
+  border: 1px solid var(--text);
+}
+
+.pilar {
+  background: var(--paper);
+  padding: 40px 32px;
+}
+
+.pilar .momento {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--coral);
+  display: block;
+  margin-bottom: 18px;
+}
+
+.pilar h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.pilar p { color: var(--text-soft); font-size: 0.95rem; }
+
+/* --- Artículos / blog --- */
+.articulos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.tarjeta-articulo { display: flex; flex-direction: column; }
+
+.tarjeta-articulo .categoria {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sage);
+  margin-bottom: 12px;
+}
+
+.tarjeta-articulo h3 {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.tarjeta-articulo p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.tarjeta-articulo .leer {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--coral);
+  letter-spacing: 0.03em;
+}
+
+.tarjeta-articulo .leer::after { content: ' →'; }
+
+/* --- Newsletter / CTA banda --- */
+.banda-cta {
+  background: var(--sage);
+  color: var(--ink);
+  padding: 64px 0;
+}
+
+.banda-cta .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.banda-cta h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.8rem;
+  max-width: 20ch;
+}
+
+/* --- Footer --- */
+footer.site {
+  background: var(--ink);
+  color: var(--paper-dim);
+  padding: 56px 0 32px;
+}
+
+footer.site .foot-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+footer.site h4 {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+  margin-bottom: 16px;
+}
+
+footer.site ul { list-style: none; }
+footer.site li { margin-bottom: 8px; font-size: 0.9rem; }
+footer.site li a:hover { color: var(--amber); }
+
+.foot-bottom {
+  border-top: 1px solid rgba(240,237,228,0.15);
+  padding-top: 24px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--paper-dim);
+  opacity: 0.7;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* --- Página de artículo --- */
+.articulo-header {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 70px 0 60px;
+}
+
+.articulo-header .categoria {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+  margin-bottom: 18px;
+  display: block;
+}
+
+.articulo-header h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3rem);
+  max-width: 20ch;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.meta-articulo {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--sage);
+}
+
+.contenido-articulo {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 64px 28px;
+}
+
+.contenido-articulo h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 40px 0 18px;
+}
+
+.contenido-articulo p { margin-bottom: 20px; color: var(--text); }
+
+.contenido-articulo ul { margin: 0 0 20px 22px; }
+.contenido-articulo li { margin-bottom: 8px; }
+
+.aviso-anuncio {
+  background: var(--paper-dim);
+  border: 1px dashed var(--sage);
+  padding: 20px;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text-soft);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 40px 0;
+}
+
+/* --- Páginas simples (sobre mí, contacto, privacidad) --- */
+.pagina-simple {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 28px 100px;
+}
+
+.pagina-simple h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 28px;
+}
+
+.pagina-simple h2 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 32px 0 14px;
+}
+
+.pagina-simple p { margin-bottom: 18px; color: var(--text); }
+
+.formulario { margin-top: 32px; display: flex; flex-direction: column; gap: 18px; max-width: 480px; }
+
+.formulario label {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  display: block;
+  color: var(--text-soft);
+}
+
+.formulario input, .formulario textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--text-soft);
+  background: var(--paper);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.formulario input:focus, .formulario textarea:focus {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 760px) {
+  nav.main { display: none; }
+  .pilares { grid-template-columns: 1fr; }
+  footer.site .foot-grid { grid-template-columns: 1fr; gap: 28px; }
+  .banda-cta .wrap { flex-direction: column; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+
+:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
